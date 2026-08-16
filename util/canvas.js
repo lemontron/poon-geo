@@ -1,7 +1,3 @@
-// let fs;
-//
-// if (process.env.NODE_ENV === 'server') fs = await import('fs');
-
 export class Canvas {
 	constructor(width, height) {
 		this.width = width;
@@ -24,7 +20,7 @@ export class Canvas {
 	debug(filePath) {
 		const header = `P4\n${this.width} ${this.height}\n`;
 		const buffer = Buffer.concat([Buffer.from(header), this.pixels]);
-		fs.writeFileSync(filePath, buffer);
+		// fs.writeFileSync(filePath, buffer);
 	}
 
 	fillTriangle(x1, y1, x2, y2, x3, y3) {
